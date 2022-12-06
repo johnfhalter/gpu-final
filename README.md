@@ -1,7 +1,11 @@
-Final project. I've built and run the cuda atari port.
+Cuda GPU Advanced Libraries, final project.
 
-Various obstacles during build process, documented in cule_attempt.out.
-Successful build: cule_success.out
+I've (tried) built and run the cuda atari port.  This project utilizes pytorch built on top of cuda libraries, and trains several AI models to play classic Atari games from the 1980s.  
+
+The model I've focused on is the a2c, which stands for Actor Critic model.  This is a Reinforcement Learning algorithm, reference: https://greydanus.github.io/files/mastering-atari-actor.pdf
+
+Various obstacles were encountered during build process, documented in build\_attempt.out.
+Successful build was accomplished: build\_success.out
 
 Current runtime error:
 cd examples
