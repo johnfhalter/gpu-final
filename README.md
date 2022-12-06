@@ -1,5 +1,7 @@
 Cuda GPU Advanced Libraries, final project.
 
+Coursera hardware:  Tesla V100, nvidia architecture sm_70
+
 I've (tried) built and run the cuda atari port.  This project utilizes pytorch built on top of cuda libraries, and trains several AI models to play classic Atari games from the 1980s.  
 
 The model I've focused on is the a2c, which stands for Actor Critic model.  This is a Reinforcement Learning algorithm, reference: https://greydanus.github.io/files/mastering-atari-actor.pdf

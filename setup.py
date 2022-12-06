@@ -9,7 +9,8 @@ from distutils.cmd import Command
 from setuptools import find_packages, setup, Extension
 from examples.utils.runtime import Runtime
 
-#pus = torch.cuda.get_arch_list() if torch.cuda.device_count() > 0 else ['70']
+#gpus = torch.cuda.get_arch_list() if torch.cuda.device_count() > 0 else ['70']
+# Tesla V100 => sm_70
 gpus = ['sm_70']
 print(gpus)
 codes = [arch[-2] + '0' for arch in gpus]
@@ -22,6 +23,8 @@ CUDA = runtime._locate()
 
 sources = [os.path.join('torchcule', f) for f in ['frontend.cpp']]
 third_party_dir = os.path.join(base_dir, 'third_party')
+
+# added dirs for required header files
 include_dirs = [base_dir, os.path.join(third_party_dir, 'agency'), os.path.join(third_party_dir, 'pybind11', 'include'), CUDA['include'], '/home/coder/project/jfh/gpu-final/Python-3.9.9/Include']
 libraries = ['gomp', 'z']
 cxx_flags = []
