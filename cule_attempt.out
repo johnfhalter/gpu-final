@@ -1,0 +1,161 @@
+Installing collected packages: nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, nvidia-cudnn-cu11, nvidia-cuda-runtime-cu11, torch
+  WARNING: The scripts convert-caffe2-to-onnx, convert-onnx-to-caffe2 and torchrun are installed in '/home/coder/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 torch-1.13.0
+
+Successfully installed numpy-1.23.5 pillow-9.3.0 torchvision-0.14.0
+
+Collecting atari_py
+  Downloading atari_py-0.2.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+     |████████████████████████████████| 2.8 MB 4.2 MB/s 
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: numpy in /home/coder/.local/lib/python3.8/site-packages (from atari_py) (1.23.5)
+Installing collected packages: six, atari-py
+Successfully installed atari-py-0.2.9 six-1.16.0
+
+Collecting opencv-python
+  Downloading opencv_python-4.6.0.66-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (60.9 MB)
+     |████████████████████████████████| 60.9 MB 34.1 MB/s 
+Requirement already satisfied: numpy>=1.14.5; python_version >= "3.7" in /home/coder/.local/lib/python3.8/site-packages (from opencv-python) (1.23.5)
+Installing collected packages: opencv-python
+Successfully installed opencv-python-4.6.0.66
+coder@3aa960928ca8:~/project$ python3 -m pip install cython 
+Collecting cython
+  Downloading Cython-0.29.32-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+     |████████████████████████████████| 1.9 MB 36.6 MB/s 
+Installing collected packages: cython
+Successfully installed cython-0.29.32
+
+
+#error
+Defaulting to user installation because normal site-packages is not writeable
+Processing /home/coder/project/cule
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: gym>=0.9.5 in /home/coder/.local/lib/python3.8/site-packages (from torchcule==0.1.0) (0.26.2)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (5.1.0)
+Requirement already satisfied: cloudpickle>=1.2.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (2.2.0)
+Requirement already satisfied: gym-notices>=0.0.4 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (0.0.8)
+Requirement already satisfied: numpy>=1.18.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (1.23.5)
+Requirement already satisfied: zipp>=0.5 in /home/coder/.local/lib/python3.8/site-packages (from importlib-metadata>=4.8.0->gym>=0.9.5->torchcule==0.1.0) (3.11.0)
+Building wheels for collected packages: torchcule
+  Building wheel for torchcule (setup.py) ... error
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [30 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.linux-x86_64-cpython-38
+      creating build/lib.linux-x86_64-cpython-38/torchcule
+      copying torchcule/__init__.py -> build/lib.linux-x86_64-cpython-38/torchcule
+      creating build/lib.linux-x86_64-cpython-38/examples
+      copying examples/__init__.py -> build/lib.linux-x86_64-cpython-38/examples
+      creating build/lib.linux-x86_64-cpython-38/torchcule/atari
+      copying torchcule/atari/env.py -> build/lib.linux-x86_64-cpython-38/torchcule/atari
+      copying torchcule/atari/state.py -> build/lib.linux-x86_64-cpython-38/torchcule/atari
+      copying torchcule/atari/rom.py -> build/lib.linux-x86_64-cpython-38/torchcule/atari
+      copying torchcule/atari/__init__.py -> build/lib.linux-x86_64-cpython-38/torchcule/atari
+      creating build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/model.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/a2c_main.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/train.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/test.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/__init__.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      copying examples/a2c/helper.py -> build/lib.linux-x86_64-cpython-38/examples/a2c
+      creating build/lib.linux-x86_64-cpython-38/examples/utils
+      copying examples/utils/initializers.py -> build/lib.linux-x86_64-cpython-38/examples/utils
+      copying examples/utils/launcher.py -> build/lib.linux-x86_64-cpython-38/examples/utils
+      copying examples/utils/runtime.py -> build/lib.linux-x86_64-cpython-38/examples/utils
+      copying examples/utils/__init__.py -> build/lib.linux-x86_64-cpython-38/examples/utils
+      running build_ext
+      building 'torchcule_atari' extension
+      /usr/local/cuda/bin/nvcc -I/home/coder/project/cule -I/home/coder/project/cule/third_party/agency -I/home/coder/project/cule/third_party/pybind11/include -I/usr/local/cuda/include -I/usr/include/python3.8 -c torchcule/backend.cu -o build/temp.linux-x86_64-cpython-38/torchcule/backend.o -arch=sm_30 -gencode=arch=compute_30,code=sm_30 -gencode=arch=compute_50,code=sm_50 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_80,code=sm_80 -O3 -Xptxas=-v -Xcompiler=-Wall,-Wextra,-fPIC -ccbin=gcc
+      nvcc fatal   : Value 'sm_30' is not defined for option 'gpu-architecture'
+      error: command '/usr/local/cuda/bin/nvcc' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for torchcule
+  Running setup.py clean for torchcule
+
+coder@3aa960928ca8:~/project/cule$ nvidia-smi
+Tue Dec  6 15:02:01 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.39.01    Driver Version: 510.39.01    CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:00:1A.0 Off |                    0 |
+| N/A   55C    P0   220W / 300W |   2118MiB / 32768MiB |     76%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   2044733      C                                    1995MiB |
++-----------------------------------------------------------------------------+
+
+Tesla V100 => sm_70
+
+Try adjusted command for sm_70:
+      /usr/local/cuda/bin/nvcc -I/home/coder/project/cule -I/home/coder/project/cule/third_party/agency -I/home/coder/project/cule/third_party/pybind11/include -I/usr/local/cuda/include -I/usr/include/python3.8 -c torchcule/backend.cu -o backend.o -arch=sm_70 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_80,code=sm_80 -O3 -Xptxas=-v -Xcompiler=-Wall,-Wextra,-fPIC -ccbin=gcc
+
+Update setup.py for additional include directories:
+include_dirs = [base_dir, os.path.join(third_party_dir, 'agency'), os.path.join(third_party_dir, 'pybind11', 'include'), CUDA['include'], '/home/coder/project/jfh/gpu-final/Python-3.9.9', '/home/coder/project/jfh/gpu-final/Python-3.9.9/Include']
+
+
+coder@3aa960928ca8:~/project/cule$ python3 -m pip install .
+Defaulting to user installation because normal site-packages is not writeable
+Processing /home/coder/project/cule
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: gym>=0.9.5 in /home/coder/.local/lib/python3.8/site-packages (from torchcule==0.1.0) (0.26.2)
+Requirement already satisfied: importlib-metadata>=4.8.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (5.1.0)
+Requirement already satisfied: cloudpickle>=1.2.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (2.2.0)
+Requirement already satisfied: gym-notices>=0.0.4 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (0.0.8)
+Requirement already satisfied: numpy>=1.18.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (1.23.5)
+Requirement already satisfied: zipp>=0.5 in /home/coder/.local/lib/python3.8/site-packages (from importlib-metadata>=4.8.0->gym>=0.9.5->torchcule==0.1.0) (3.11.0)
+Building wheels for collected packages: torchcule
+  Building wheel for torchcule (setup.py) ... done
+  Created wheel for torchcule: filename=torchcule-0.1.0-cp38-cp38-linux_x86_64.whl size=1478156 sha256=a317a761d7674f1f456c1572df6eae5376417dcbe7b904e2abd19c587b653488
+  Stored in directory: /tmp/pip-ephem-wheel-cache-6lpz4amk/wheels/ce/61/84/65fd9f763c672b7ec41c702cab788ef4c30fc54bbffaf61cbe
+Successfully built torchcule
+Installing collected packages: torchcule
+Successfully installed torchcule-0.1.0
+
+# runtime errors 
+coder@3aa960928ca8:~/project/cule/examples/a2c$ python3 a2c_main.py --env-name SpaceInvadersNoFrameskip-v4 --normalize --use-cuda-env --num-ales 1200 --num-steps 20 --num-steps-per-update 1 --num-minibatches 20 --t-max 8000000 --evaluation-interval 200000
+
+...
+  File "/home/coder/.local/lib/python3.8/site-packages/torchcule/atari/rom.py", line 11, in <module>
+    from torchcule_atari import AtariRom
+ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZN8AtariEnv16frame_state_sizeEv
+
+# try downgrading torch, torchvision
+Collecting torchvision==0.5.0
+  Downloading torchvision-0.5.0-cp38-cp38-manylinux1_x86_64.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 122.4 MB/s eta 0:00:00
+Collecting torch==1.4.0
+  Downloading torch-1.4.0-cp38-cp38-manylinux1_x86_64.whl (753.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 753.4/753.4 MB 3.4 MB/s eta 0:00:00
+Requirement already satisfied: six in /home/coder/.local/lib/python3.8/site-packages (from torchvision==0.5.0) (1.16.0)
+Requirement already satisfied: numpy in /home/coder/.local/lib/python3.8/site-packages (from torchvision==0.5.0) (1.23.5)
+Requirement already satisfied: pillow>=4.1.1 in /home/coder/.local/lib/python3.8/site-packages (from torchvision==0.5.0) (9.3.0)
+Installing collected packages: torch, torchvision
+  Attempting uninstall: torch
+    Found existing installation: torch 1.5.0
+    Uninstalling torch-1.5.0:
+      Successfully uninstalled torch-1.5.0
+  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.14.0
+    Uninstalling torchvision-0.14.0:
+      Successfully uninstalled torchvision-0.14.0
+Successfully installed torch-1.4.0 torchvision-0.5.0
+

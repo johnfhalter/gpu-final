@@ -1,0 +1,312 @@
+coder@3aa960928ca8:~/project/cule$ /usr/local/cuda/bin/nvcc -I/home/coder/project/cule -I/home/coder/project/cule/third_party/agency -I/home/coder/project/cule/third_party/pybind11/include -I/usr/local/cuda/include -I/usr/include/python3.8 -c torchcule/backend.cu -o build/temp.linux-x86_64-cpython-38/torchcule/backend.o -arch=sm_70 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_80,code=sm_80 -O3 -Xptxas=-v -Xcompiler=-Wall,-Wextra,-fPIC -ccbin=gcc/home/coder/project/cule/third_party/agency/agency/detail/iterator/distance.hpp(16): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "std::iterator_traits<RandomAccessIterator>::difference_type agency::detail::distance(std::random_access_iterator_tag, RandomAccessIterator, RandomAccessIterator) [with RandomAccessIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+(37): here
+            instantiation of "std::iterator_traits<InputIterator>::difference_type agency::detail::distance(InputIterator, InputIterator) [with InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(223): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(40): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > ::~vector()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::vector<unsigned char, ::std::allocator<unsigned char> > ::~vector()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::__cxx11::basic_string<char,     ::std::char_traits<char> , ::std::allocator<char> > ::~basic_string()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::__cxx11::basic_string<char,     ::std::char_traits<char> , ::std::allocator<char> > ::~basic_string()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/iterator/distance.hpp(16): warning: calling a __host__ function("__gnu_cxx::__normal_iterator<T1, T2> ::difference_type __gnu_cxx::operator -< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > (const __gnu_cxx::__normal_iterator<T1, T2> &, const __gnu_cxx::__normal_iterator<T1, T2> &)") from a __host__ __device__ function("agency::detail::distance< ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > > ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function("bool __gnu_cxx::operator !=< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > (const  ::__gnu_cxx::__normal_iterator<T1, T2>  &, const  ::__gnu_cxx::__normal_iterator<T1, T2>  &)") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(40): warning: calling a __host__ function("__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ::operator *() const") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function("__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ::operator ++()") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/iterator/distance.hpp(16): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "std::iterator_traits<RandomAccessIterator>::difference_type agency::detail::distance(std::random_access_iterator_tag, RandomAccessIterator, RandomAccessIterator) [with RandomAccessIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+(37): here
+            instantiation of "std::iterator_traits<InputIterator>::difference_type agency::detail::distance(InputIterator, InputIterator) [with InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(223): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(40): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "OutputIterator agency::detail::copy(ExecutionPolicy &&, InputIterator, InputIterator, OutputIterator) [with ExecutionPolicy=agency::sequenced_execution_policy &, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, OutputIterator=std::__detected_or_t<cule::atari::Action *, std::__allocator_traits_base::__pointer, agency::allocator<cule::atari::Action>>, __deduced_true332=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(235): here
+            instantiation of "void agency::vector<T, Allocator>::assign(std::forward_iterator_tag, ExecutionPolicy &&, ForwardIterator, ForwardIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, ForwardIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(291): here
+            instantiation of "void agency::vector<T, Allocator>::assign(ExecutionPolicy &&, InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, ExecutionPolicy=agency::sequenced_execution_policy, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>, __deduced_true352=true, <unnamed>=(void *)nullptr]" 
+/home/coder/project/cule/third_party/agency/agency/container/vector.hpp(283): here
+            instantiation of "void agency::vector<T, Allocator>::assign(InputIterator, InputIterator) [with T=cule::atari::Action, Allocator=agency::allocator<cule::atari::Action>, InputIterator=__gnu_cxx::__normal_iterator<cule::atari::Action *, std::vector<cule::atari::Action, std::allocator<cule::atari::Action>>>]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(243): here
+            instantiation of "cule::atari::wrapped_environment<Allocator>::wrapped_environment(const cule::atari::rom &, size_t, size_t) [with Allocator=agency::allocator]" 
+/home/coder/project/cule/cule/atari/cuda/dispatch.hpp(34): here
+            instantiation of "void cule::atari::dispatch::reset<Environment,Wrapper>(cule::cuda::parallel_execution_policy &, Wrapper &, uint32_t *) [with Environment=cule::atari::environment<0>, Wrapper=cule::atari::wrapper]" 
+/home/coder/project/cule/cule/atari/wrapper.cpp(102): here
+            instantiation of "void cule::atari::wrapper::reset(ExecutionPolicy &&, uint32_t *) [with ExecutionPolicy=cule_policy &]" 
+torchcule/backend.cu(40): here
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > ::~vector()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::vector<unsigned char, ::std::allocator<unsigned char> > ::~vector()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::__cxx11::basic_string<char,     ::std::char_traits<char> , ::std::allocator<char> > ::~basic_string()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/cule/atari/accessors.hpp(315): warning: calling a __host__ function("std::__cxx11::basic_string<char,     ::std::char_traits<char> , ::std::allocator<char> > ::~basic_string()") from a __host__ __device__ function("cule::atari::rom::~rom") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/iterator/distance.hpp(16): warning: calling a __host__ function("__gnu_cxx::__normal_iterator<T1, T2> ::difference_type __gnu_cxx::operator -< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > (const __gnu_cxx::__normal_iterator<T1, T2> &, const __gnu_cxx::__normal_iterator<T1, T2> &)") from a __host__ __device__ function("agency::detail::distance< ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > > ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function("bool __gnu_cxx::operator !=< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > (const  ::__gnu_cxx::__normal_iterator<T1, T2>  &, const  ::__gnu_cxx::__normal_iterator<T1, T2>  &)") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(40): warning: calling a __host__ function("__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ::operator *() const") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+/home/coder/project/cule/third_party/agency/agency/detail/algorithm/copy/copy.hpp(38): warning: calling a __host__ function("__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ::operator ++()") from a __host__ __device__ function("agency::detail::copy< ::agency::sequenced_execution_policy &,  ::__gnu_cxx::__normal_iterator< ::cule::atari::Action *,     ::std::vector< ::cule::atari::Action, ::std::allocator< ::cule::atari::Action> > > ,  ::cule::atari::Action *, (bool)1, (void *)0> ") is not allowed
+
+ptxas info    : 276904 bytes gmem, 18432 bytes cmem[3]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda13action_kernelILm256EEEvjjjPKNS0_6ActionEPjPS3_' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda13action_kernelILm256EEEvjjjPKNS0_6ActionEPjPS3_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 13 registers, 392 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda20apply_palette_kernelILm1024EEEviiiPhPKh' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda20apply_palette_kernelILm1024EEEviiiPhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 384 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda20apply_rescale_kernelILm1024EEEviiPhPKh' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda20apply_rescale_kernelILm1024EEEviiPhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 376 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda14process_kernelINS0_5stateELm1EEEvjbPKjS5_S5_PT_PNS0_11frame_stateEPh' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda14process_kernelINS0_5stateELm1EEEvjbPKjS5_S5_PT_PNS0_11frame_stateEPh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda15get_data_kernelINS0_5stateENS0_3aleELm256EEEvibPT_PKhPbPfPi' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda15get_data_kernelINS0_5stateENS0_3aleELm256EEEvibPT_PKhPbPfPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, 400 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi4EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi4EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    144 bytes stack frame, 28 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 72 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi10EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi10EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 170 bytes spill stores, 696 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi8EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi8EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 162 bytes spill stores, 380 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi9EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi9EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 270 bytes spill stores, 508 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi3EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi3EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 270 bytes spill stores, 508 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 12 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi1EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi1EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 158 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi0EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi0EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 158 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0], 4 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda17set_states_kernelINS0_5stateELm128EEEvjPKiPT_PNS0_11frame_stateEPKS6_PKS8_PhPKh' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda17set_states_kernelINS0_5stateELm128EEEvjPKiPT_PNS0_11frame_stateEPKS6_PKS8_PhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda17get_states_kernelINS0_5stateELm128EEEvjPKiPKT_PKNS0_11frame_stateEPS6_PS9_PKhPh' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda17get_states_kernelINS0_5stateELm128EEEvjPKiPKT_PKNS0_11frame_stateEPS6_PS9_PKhPh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda12reset_kernelINS0_5stateELm1EEEvjmPT_PhPKS4_PKhPNS0_11frame_stateESC_PjSD_' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda12reset_kernelINS0_5stateELm1EEEvjmPT_PhPKS4_PKhPNS0_11frame_stateESC_PjSD_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 432 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda24initialize_states_kernelINS0_5stateELm1EEEvjjPT_PhPKS4_PKhPjPNS0_11frame_stateESD_' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda24initialize_states_kernelINS0_5stateELm1EEEvjjPT_PhPKS4_PKhPjPNS0_11frame_stateESD_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda30initialize_frame_states_kernelINS0_5stateELm128EEEvjPT_PNS0_11frame_stateEPKjPKhSB_SB_SB_SB_' for 'sm_70'
+ptxas info    : Function properties for _ZN4cule5atari4cuda30initialize_frame_states_kernelINS0_5stateELm128EEEvjPT_PNS0_11frame_stateEPKjPKhSB_SB_SB_SB_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, 424 bytes cmem[0]
+ptxas info    : 276904 bytes gmem, 18432 bytes cmem[3]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda13action_kernelILm256EEEvjjjPKNS0_6ActionEPjPS3_' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda13action_kernelILm256EEEvjjjPKNS0_6ActionEPjPS3_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 13 registers, 392 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda20apply_palette_kernelILm1024EEEviiiPhPKh' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda20apply_palette_kernelILm1024EEEviiiPhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, 384 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda20apply_rescale_kernelILm1024EEEviiPhPKh' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda20apply_rescale_kernelILm1024EEEviiPhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, 376 bytes cmem[0], 8 bytes cmem[2]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda14process_kernelINS0_5stateELm1EEEvjbPKjS5_S5_PT_PNS0_11frame_stateEPh' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda14process_kernelINS0_5stateELm1EEEvjbPKjS5_S5_PT_PNS0_11frame_stateEPh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda15get_data_kernelINS0_5stateENS0_3aleELm256EEEvibPT_PKhPbPfPi' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda15get_data_kernelINS0_5stateENS0_3aleELm256EEEvibPT_PKhPbPfPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, 400 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi4EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi4EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    144 bytes stack frame, 28 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 72 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi10EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi10EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 174 bytes spill stores, 744 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi8EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi8EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 166 bytes spill stores, 428 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi9EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi9EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 274 bytes spill stores, 556 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi3EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi3EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 274 bytes spill stores, 556 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi1EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi1EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 162 bytes spill stores, 424 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi0EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda11step_kernelINS0_5stateENS0_11environmentILi0EEELm1EEEvjbPT_PhPjPKNS0_6ActionESC_Pb
+    240 bytes stack frame, 162 bytes spill stores, 424 bytes spill loads
+ptxas info    : Used 64 registers, 408 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda17set_states_kernelINS0_5stateELm128EEEvjPKiPT_PNS0_11frame_stateEPKS6_PKS8_PhPKh' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda17set_states_kernelINS0_5stateELm128EEEvjPKiPT_PNS0_11frame_stateEPKS6_PKS8_PhPKh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda17get_states_kernelINS0_5stateELm128EEEvjPKiPKT_PKNS0_11frame_stateEPS6_PS9_PKhPh' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda17get_states_kernelINS0_5stateELm128EEEvjPKiPKT_PKNS0_11frame_stateEPS6_PS9_PKhPh
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda12reset_kernelINS0_5stateELm1EEEvjmPT_PhPKS4_PKhPNS0_11frame_stateESC_PjSD_' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda12reset_kernelINS0_5stateELm1EEEvjmPT_PhPKS4_PKhPNS0_11frame_stateESC_PjSD_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 432 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda24initialize_states_kernelINS0_5stateELm1EEEvjjPT_PhPKS4_PKhPjPNS0_11frame_stateESD_' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda24initialize_states_kernelINS0_5stateELm1EEEvjjPT_PhPKS4_PKhPjPNS0_11frame_stateESD_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, 416 bytes cmem[0]
+ptxas info    : Compiling entry function '_ZN4cule5atari4cuda30initialize_frame_states_kernelINS0_5stateELm128EEEvjPT_PNS0_11frame_stateEPKjPKhSB_SB_SB_SB_' for 'sm_80'
+ptxas info    : Function properties for _ZN4cule5atari4cuda30initialize_frame_states_kernelINS0_5stateELm128EEEvjPT_PNS0_11frame_stateEPKjPKhSB_SB_SB_SB_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, 424 bytes cmem[0]
+
+

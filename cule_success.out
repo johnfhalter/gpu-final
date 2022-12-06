@@ -1,0 +1,154 @@
+coder@05bedc6376b1:~/project$ ./cule.sh
+Collecting torch
+  Downloading torch-1.13.0-cp38-cp38-manylinux1_x86_64.whl (890.2 MB)
+     |████████████████████████████████| 890.2 MB 14 kB/s 
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     |████████████████████████████████| 557.1 MB 28 kB/s 
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from torch) (4.0.0)
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     |████████████████████████████████| 849 kB 132.2 MB/s 
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     |████████████████████████████████| 21.0 MB 116.6 MB/s 
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     |████████████████████████████████| 317.1 MB 175.3 MB/s 
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cuda-runtime-cu11==11.7.99->torch) (59.1.0)
+Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (from nvidia-cuda-runtime-cu11==11.7.99->torch) (0.34.2)
+Installing collected packages: nvidia-cublas-cu11, nvidia-cudnn-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, torch
+  WARNING: The scripts convert-caffe2-to-onnx, convert-onnx-to-caffe2 and torchrun are installed in '/home/coder/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 torch-1.13.0
+Collecting torchvision
+  Downloading torchvision-0.14.0-cp38-cp38-manylinux1_x86_64.whl (24.3 MB)
+     |████████████████████████████████| 24.3 MB 3.9 MB/s 
+Requirement already satisfied: torch==1.13.0 in /home/coder/.local/lib/python3.8/site-packages (from torchvision) (1.13.0)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from torchvision) (4.0.0)
+Collecting numpy
+  Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     |████████████████████████████████| 17.1 MB 137.8 MB/s 
+Collecting pillow!=8.3.*,>=5.3.0
+  Downloading Pillow-9.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 116.7 MB/s 
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from torchvision) (2.26.0)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /home/coder/.local/lib/python3.8/site-packages (from torch==1.13.0->torchvision) (11.7.99)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /home/coder/.local/lib/python3.8/site-packages (from torch==1.13.0->torchvision) (8.5.0.96)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /home/coder/.local/lib/python3.8/site-packages (from torch==1.13.0->torchvision) (11.10.3.66)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /home/coder/.local/lib/python3.8/site-packages (from torch==1.13.0->torchvision) (11.7.99)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in /usr/local/lib/python3.8/dist-packages (from requests->torchvision) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in /usr/local/lib/python3.8/dist-packages (from requests->torchvision) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests->torchvision) (2021.10.8)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests->torchvision) (1.26.7)
+Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (from nvidia-cuda-runtime-cu11==11.7.99->torch==1.13.0->torchvision) (0.34.2)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cuda-runtime-cu11==11.7.99->torch==1.13.0->torchvision) (59.1.0)
+Installing collected packages: numpy, pillow, torchvision
+  WARNING: The scripts f2py, f2py3 and f2py3.8 are installed in '/home/coder/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-1.23.5 pillow-9.3.0 torchvision-0.14.0
+Collecting psutil
+  Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+     |████████████████████████████████| 280 kB 41.1 MB/s 
+Installing collected packages: psutil
+Successfully installed psutil-5.9.4
+Collecting pytz
+  Downloading pytz-2022.6-py2.py3-none-any.whl (498 kB)
+     |████████████████████████████████| 498 kB 35.9 MB/s 
+Installing collected packages: pytz
+Successfully installed pytz-2022.6
+Collecting tqdm
+  Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 22.6 MB/s 
+Installing collected packages: tqdm
+  WARNING: The script tqdm is installed in '/home/coder/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed tqdm-4.64.1
+Collecting atari_py
+  Downloading atari_py-0.2.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.8 MB)
+     |████████████████████████████████| 2.8 MB 46.7 MB/s 
+Requirement already satisfied: numpy in /home/coder/.local/lib/python3.8/site-packages (from atari_py) (1.23.5)
+Collecting six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, atari-py
+Successfully installed atari-py-0.2.9 six-1.16.0
+Collecting opencv-python
+  Downloading opencv_python-4.6.0.66-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (60.9 MB)
+     |████████████████████████████████| 60.9 MB 44.2 MB/s 
+Requirement already satisfied: numpy>=1.17.3; python_version >= "3.8" in /home/coder/.local/lib/python3.8/site-packages (from opencv-python) (1.23.5)
+Installing collected packages: opencv-python
+Successfully installed opencv-python-4.6.0.66
+Collecting cython
+  Downloading Cython-0.29.32-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+     |████████████████████████████████| 1.9 MB 44.1 MB/s 
+Installing collected packages: cython
+Successfully installed cython-0.29.32
+Collecting pip
+  Downloading pip-22.3.1-py3-none-any.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 39.8 MB/s 
+Installing collected packages: pip
+Successfully installed pip-22.3.1
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (59.1.0)
+Collecting setuptools
+  Downloading setuptools-65.6.3-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 90.8 MB/s eta 0:00:00
+Installing collected packages: setuptools
+Successfully installed setuptools-65.6.3
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (0.34.2)
+Collecting wheel
+  Downloading wheel-0.38.4-py3-none-any.whl (36 kB)
+Installing collected packages: wheel
+Successfully installed wheel-0.38.4
+fatal: destination path 'cule' already exists and is not an empty directory.
+Defaulting to user installation because normal site-packages is not writeable
+Processing /home/coder/project/cule
+  Preparing metadata (setup.py) ... done
+Collecting gym>=0.9.5
+  Downloading gym-0.26.2.tar.gz (721 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 721.7/721.7 kB 86.6 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: numpy>=1.18.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (1.23.5)
+Collecting importlib-metadata>=4.8.0
+  Downloading importlib_metadata-5.1.0-py3-none-any.whl (21 kB)
+Collecting cloudpickle>=1.2.0
+  Downloading cloudpickle-2.2.0-py3-none-any.whl (25 kB)
+Collecting gym-notices>=0.0.4
+  Downloading gym_notices-0.0.8-py3-none-any.whl (3.0 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.11.0-py3-none-any.whl (6.6 kB)
+Building wheels for collected packages: torchcule, gym
+  Building wheel for torchcule (setup.py) ... done
+  Created wheel for torchcule: filename=torchcule-0.1.0-cp38-cp38-linux_x86_64.whl size=1478156 sha256=6a2ebe7d82155a0e6fea0dd370dc5a76e9243f43a24d9456b6e57fc996ea7467
+  Stored in directory: /tmp/pip-ephem-wheel-cache-12ryy098/wheels/ce/61/84/65fd9f763c672b7ec41c702cab788ef4c30fc54bbffaf61cbe
+  Building wheel for gym (pyproject.toml) ... done
+  Created wheel for gym: filename=gym-0.26.2-py3-none-any.whl size=827630 sha256=5fa8ceed9926fbc9f98531908f79ca26486265725d725750cf7bde918ee75f4f
+  Stored in directory: /home/coder/.cache/pip/wheels/37/37/10/969be0b4bdeedbba8ecab056f1cbbf3a959cd7dffd435c9a39
+Successfully built torchcule gym
+Installing collected packages: gym-notices, zipp, cloudpickle, importlib-metadata, gym, torchcule
+Successfully installed cloudpickle-2.2.0 gym-0.26.2 gym-notices-0.0.8 importlib-metadata-5.1.0 torchcule-0.1.0 zipp-3.11.0
+
+coder@05bedc6376b1:~/project/cule$ ll
+total 33792
+drwxr-xr-x 11 coder  coder       6144 Dec  6 16:08 ./
+drwxrwxrwx  6 nobody nogroup     6144 Dec  6 18:50 ../
+-rw-r--r--  1 coder  coder   26621296 Dec  6 15:56 backend.o
+drwxr-xr-x  5 coder  coder       6144 Dec  6 16:08 build/
+drwxr-xr-x  4 coder  coder       6144 Dec  6 02:59 cule/
+drwxr-xr-x  2 coder  coder       6144 Dec  6 02:59 envs/
+drwxr-xr-x  9 coder  coder       6144 Dec  6 02:59 examples/
+drwxr-xr-x  9 coder  coder       6144 Dec  6 14:57 .git/
+-rw-r--r--  1 coder  coder        237 Dec  6 02:59 .gitattributes
+-rw-r--r--  1 coder  coder        170 Dec  6 02:59 .gitignore
+-rw-r--r--  1 coder  coder        222 Dec  6 02:59 .gitmodules
+-rw-r--r--  1 coder  coder       1565 Dec  6 02:59 LICENSE.TXT
+drwxr-xr-x  3 coder  coder       6144 Dec  6 02:59 media/
+-rw-------  1 coder  coder    7903257 Dec  6 15:51 nohup.out
+-rw-r--r--  1 coder  coder       8144 Dec  6 02:59 README.md
+-rw-r--r--  1 coder  coder       4046 Dec  6 16:07 setup.py
+drwxr-xr-x  4 coder  coder       6144 Dec  6 02:59 third_party/
+drwxr-xr-x  3 coder  coder       6144 Dec  6 14:57 torchcule/
+drwxr-xr-x  2 coder  coder       6144 Dec  6 18:52 torchcule.egg-info/
