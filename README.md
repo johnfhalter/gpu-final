@@ -12,13 +12,15 @@ Various obstacles were encountered during build process, documented in data/buil
 Successful build was accomplished: data/build\_success.out
 
 Current runtime error:
+
 cd examples
+
 python3 a2c/a2c_main.py
+
 File "/home/coder/.local/lib/python3.8/site-packages/torchcule/atari/rom.py", line 11, in <module>
     from torchcule_atari import AtariRom
-ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: \_ZN8AtariEnv16frame_state_sizeEv
 
-That has to do with display issues, as the rom files contain the read-only-memory for each game.
+ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: \_ZN8AtariEnv16frame_state_sizeEv
 
 I learned a lot from this project and class.  All the library versions that need to be ensured, permissions required for installs.  The Reinforcement Learning algorithms are fascinating, and it is quite interesting to see them applied to these classic video games on GPU architecture with CUDA.
 
