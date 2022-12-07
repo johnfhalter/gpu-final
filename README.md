@@ -13,7 +13,7 @@ Successful build was accomplished: data/build\_success.out
 
 Current runtime error:
 
-cd examples
+cd src
 
 python3 a2c/a2c_main.py
 
