@@ -1,2 +1,2 @@
-cd examples/a2c
+cd bin
 python3 a2c_main.py
