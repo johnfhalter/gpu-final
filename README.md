@@ -24,4 +24,8 @@ ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpyt
 
 I learned a lot from this project and class.  All the library versions that need to be ensured, permissions required for installs.  The Reinforcement Learning algorithms are fascinating, and it is quite interesting to see them applied to these classic video games on GPU architecture with CUDA.
 
-One thing I noticed in seeing a trained model play SpaceInvaders, is that the AI (not surprisingly) has near-perfect reaction time, and near-perfect aim.  The model(s) can do quite well, better than humans, after sufficient training. As a human playing these games, and not having perfect timing or aim, it's quite common to shoot the aliens in columns on one side of the group, so that there is a lower probability of the armada reaching a side of the screen, which causes them to drop down 1 level, closer to annihilating the player.  The AI model(s) that were trained never learned this strategy, as it would require higher level concepts that are unavailable in the pixel-only inputs.
+One thing I noticed in seeing a trained model play SpaceInvaders, is that the AI (not surprisingly) has near-perfect reaction time, and near-perfect aim.  The model(s) can do quite well, better than humans, after sufficient training. 
+
+As a human playing these games, and not having perfect timing or aim, it's quite common to shoot the aliens in columns on one side of the group, so that there is a lower probability of the armada reaching a side of the screen, which causes them to drop down 1 level, closer to annihilating the player.  
+
+The AI model(s) that were trained never learned this strategy, as it would require higher level concepts that are unavailable in the pixel-only inputs.
