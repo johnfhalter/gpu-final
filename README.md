@@ -2,9 +2,11 @@ Cuda GPU Advanced Libraries, final project.
 
 Coursera hardware:  Tesla V100, nvidia architecture sm_70
 
-I've (tried) built and run the cuda atari port.  This project utilizes pytorch built on top of cuda libraries, and trains several AI models to play classic Atari games from the 1980s.  
+I've built and (attempted to) run the cuda atari port.  This project utilizes pytorch built on top of cuda libraries, and trains several AI models to play classic Atari games from the 1980s.  
+Reference: https://research.nvidia.com/sites/default/files/pubs/2019-07\_GPU-Accelerated-Atari-Emulation/CuLE.pdf
 
-The model I've focused on is the a2c, which stands for Actor Critic model.  This is a Reinforcement Learning algorithm, reference: https://greydanus.github.io/files/mastering-atari-actor.pdf
+The model I've focused on is the a2c, which stands for Actor Critic model.  This is a Reinforcement Learning algorithm. 
+Reference: https://greydanus.github.io/files/mastering-atari-actor.pdf
 
 Various obstacles were encountered during build process, documented in build\_attempt.out.
 Successful build was accomplished: build\_success.out
@@ -16,5 +18,5 @@ File "/home/coder/.local/lib/python3.8/site-packages/torchcule/atari/rom.py", li
     from torchcule_atari import AtariRom
 ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: \_ZN8AtariEnv16frame_state_sizeEv
 
-That has to do with seeing the games played with the trained model.
+That has to do with display issues, as the rom files contain the read-only-memory for each game.
 

@@ -159,3 +159,6 @@ Installing collected packages: torch, torchvision
       Successfully uninstalled torchvision-0.14.0
 Successfully installed torch-1.4.0 torchvision-0.5.0
 
+# that did not work, may have something to do with these libraries which I haven't installed due to lack of permissions (but they may be on the system by default):
+apt-get install -y libsm6 libxrender-dev
+apt-get install zlib1g-dev
