@@ -9,18 +9,7 @@ The model I've focused on is the a2c, which stands for Actor Critic model.  This
 Reference: https://greydanus.github.io/files/mastering-atari-actor.pdf
 
 Various obstacles were encountered during build process, documented in data/build\_attempt.out.
-Successful build was accomplished: data/build\_success.out
-
-Current runtime error:
-
-cd src
-
-python3 a2c/a2c_main.py
-
-File "/home/coder/.local/lib/python3.8/site-packages/torchcule/atari/rom.py", line 11, in <module>
-    from torchcule_atari import AtariRom
-
-ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: \_ZN8AtariEnv16frame_state_sizeEv
+Successful build was accomplished: data/build\_success.out, output from coursera run: data/run.out.
 
 I learned a lot from this project and class.  All the library versions that need to be ensured, permissions required for installs.  The Reinforcement Learning algorithms are fascinating, and it is quite interesting to see them applied to these classic video games on GPU architecture with CUDA.
 
