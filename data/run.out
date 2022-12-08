@@ -1,0 +1,54 @@
+# runtime error on coursera lab:
+python3 a2c_main.py --env-name SpaceInvadersNoFrameskip-v4 --normalize --use-cuda-env --num-ales 1200 --num-steps 20 --num-steps-per-update 1 --num-minibatches 20 --t-max 8000000 --evaluation-interval 200000
+
+...
+  File "/home/coder/.local/lib/python3.8/site-packages/torchcule/atari/rom.py", line 11, in <module>
+    from torchcule_atari import AtariRom
+ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZN8AtariEnv16frame_state_sizeEv
+
+# attempt without using AtariRom import:
+
+coder@86e2f95243cc:~/project/cule$ ./run.sh
+{'ale_start_steps': 400,
+ 'alpha': 0.99,
+ 'clip_rewards': False,
+ 'conf_file': None,
+ 'cpu_train': False,
+ 'entropy_coef': 0.01,
+ 'env_name': 'SpaceInvadersNoFrameskip-v4',
+ 'episodic_life': False,
+ 'eps': 1e-05,
+ 'evaluation_episodes': 10,
+ 'evaluation_interval': 200000,
+ 'gamma': 0.99,
+ 'gpu': None,
+ 'local_rank': 0,
+ 'log_dir': 'runs',
+ 'lr': 0.00065,
+ 'lr_scale': False,
+ 'max_episode_length': 18000,
+ 'max_grad_norm': 0.5,
+ 'multiprocessing_distributed': False,
+ 'normalize': True,
+ 'num_ales': 1200,
+ 'num_gpus_per_node': -1,
+ 'num_stack': 4,
+ 'num_steps': 20,
+ 'output_filename': None,
+ 'plot': False,
+ 'profile': False,
+ 'save_interval': 0,
+ 'seed': 1670380736,
+ 't_max': 8000000,
+ 'tau': 1.0,
+ 'use_adam': False,
+ 'use_cuda_env': True,
+ 'use_gae': False,
+ 'use_openai': False,
+ 'use_openai_test_env': False,
+ 'value_loss_coef': 0.5,
+ 'verbose': False}
+corrupted double-linked list
+(coredump)
+
+# successful run on other location
