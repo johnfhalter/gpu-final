@@ -6,7 +6,7 @@ python3 a2c_main.py --env-name SpaceInvadersNoFrameskip-v4 --normalize --use-cud
     from torchcule_atari import AtariRom
 ImportError: /home/coder/.local/lib/python3.8/site-packages/torchcule_atari.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZN8AtariEnv16frame_state_sizeEv
 
-# attempt without using AtariRom
+# attempt without using AtariRom import
 
 coder@86e2f95243cc:~/project/cule$ ./run.sh
 {'ale_start_steps': 400,

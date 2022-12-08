@@ -32,7 +32,7 @@ Successfully installed cython-0.29.32
 Defaulting to user installation because normal site-packages is not writeable
 Processing /home/coder/project/cule
   Preparing metadata (setup.py) ... done
-Requirement already satisfied: gym>=0.9.5 in /home/coder/.local/lib/python3.8/site-packages (from torchcule==0.1.0) (0.26.2)
+Requirement already satisfied: gym>=1.9.5 in /home/coder/.local/lib/python3.8/site-packages (from torchcule==0.1.0) (0.26.2)
 Requirement already satisfied: importlib-metadata>=4.8.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (5.1.0)
 Requirement already satisfied: cloudpickle>=1.2.0 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (2.2.0)
 Requirement already satisfied: gym-notices>=0.0.4 in /home/coder/.local/lib/python3.8/site-packages (from gym>=0.9.5->torchcule==0.1.0) (0.0.8)
@@ -129,6 +129,8 @@ Building wheels for collected packages: torchcule
 Successfully built torchcule
 Installing collected packages: torchcule
 Successfully installed torchcule-0.1.0
+
+Built successfully!
 
 # runtime errors 
 coder@3aa960928ca8:~/project/cule/examples/a2c$ python3 a2c_main.py --env-name SpaceInvadersNoFrameskip-v4 --normalize --use-cuda-env --num-ales 1200 --num-steps 20 --num-steps-per-update 1 --num-minibatches 20 --t-max 8000000 --evaluation-interval 200000
